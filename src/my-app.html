@@ -13,6 +13,7 @@
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
 <link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="my-icons.html">
 
 <link rel="lazy-import" href="my-home.html">
@@ -70,16 +71,23 @@
         width: 250px;
         margin: 7px 0px 0px 10px;
       }*/
-      #topheader  {
+      .topheader  {
         margin: 0 0 0 10px;
         font-family: 'Times New Roman', Times, serif;
         color: #cfb53b;
+      }
+      .topheader.desk {
         font-size: 30px;
       }
-      iron-image#h4slong {
-        height: 40px;
-        width: 100%;
-        margin: 5px 0px 0px 0px;
+      .topheader.mob {
+        font-size: 20px;
+      }
+      iron-image#phone {
+        height: 35px;
+        width: 35px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
       }
       .drawer-list a,
       .drawer-list a.iron-selected  {
@@ -87,6 +95,9 @@
       }
       iron-pages {
         background-color: #222c6d;
+      }
+      app-toolbar {
+        @apply(--layout-horizontal);
       }
     </style>
 
@@ -122,7 +133,7 @@
           <app-toolbar>
             <paper-icon-button style="width: 60px; height: 60px;" icon="my-icons:menu" drawer-toggle></paper-icon-button>  
             <!--<a href="/"><iron-image id="h4slogo" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image></a>        -->
-            <div id="topheader">LAMORNA WINK PUB & RESTAURANT</div>
+            <titile class="topheader desk">LAMORNA WINK PUB & RESTAURANT</title>
             <!--<iron-image id="h4slong" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image>        -->
           </app-toolbar>
         </app-header>
@@ -136,8 +147,10 @@
           <app-toolbar>
             <paper-icon-button style="width: 60px; height: 60px;" icon="my-icons:menu" drawer-toggle></paper-icon-button>  
             <!--<a href="/"><iron-image id="h4slogo" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image></a>        -->
-            <div id="topheader">LAMORNA WINK</div>
-            <!--<iron-image id="h4slong" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image>        -->
+            <div title class="topheader mob">LAMORNA WINK</title>
+            <a href="tel:01736731566">
+              <iron-image id="phone" src="../images/icons/phone-call-gold.svg" preload sizing="contain"></iron-image>
+            </a>
           </app-toolbar>
         </app-header>
 
