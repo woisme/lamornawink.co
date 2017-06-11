@@ -82,6 +82,15 @@
       .topheader.mob {
         font-size: 20px;
       }
+      .telno {
+        margin: 0 0 0 10px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #cfb53b;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+      }
       iron-image#phone {
         height: 35px;
         width: 35px;
@@ -117,7 +126,7 @@
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="home" href="home">Home</a>
-          <a name="food" href="food">About Us</a>
+          <a name="food" href="food">Food</a>
           <!--<a name="events" href="events">Events</a>-->
           <a name="contactus" href="contactus">Contact Us</a>
         </iron-selector>
@@ -133,7 +142,8 @@
           <app-toolbar>
             <paper-icon-button style="width: 60px; height: 60px;" icon="my-icons:menu" drawer-toggle></paper-icon-button>  
             <!--<a href="/"><iron-image id="h4slogo" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image></a>        -->
-            <titile class="topheader desk">LAMORNA WINK PUB & RESTAURANT</title>
+            <div class="topheader desk">LAMORNA WINK PUB & RESTAURANT</div>
+            <div class="telno">01736731566</div>
             <!--<iron-image id="h4slong" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image>        -->
           </app-toolbar>
         </app-header>
@@ -147,7 +157,7 @@
           <app-toolbar>
             <paper-icon-button style="width: 60px; height: 60px;" icon="my-icons:menu" drawer-toggle></paper-icon-button>  
             <!--<a href="/"><iron-image id="h4slogo" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image></a>        -->
-            <div title class="topheader mob">LAMORNA WINK</title>
+            <div class="topheader mob">LAMORNA WINK</div>
             <a href="tel:01736731566">
               <iron-image id="phone" src="../images/icons/phone-call-gold.svg" preload sizing="contain"></iron-image>
             </a>
