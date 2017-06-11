@@ -1,0 +1,106 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/google-map/google-map.html">
+<link rel="import" href="../bower_components/google-map/google-map-marker.html">
+<link rel="import" href="../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-contactus">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      h1 {
+        font-weight: 400;
+      }
+      h4 {
+        font-weight: 300;
+        margin: 10px;
+      }
+      iron-image {
+        margin: 10px 0px 0px 10px;
+      }
+      .bigbox {
+        @apply(--layout-wrap);
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+      }
+      .box {
+        margin: 10px;
+        padding: 10px;
+        color: #757575;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+
+    <div class="card">
+      <h1>We Love to Talk</h1>
+      
+      <div class="bigbox">
+
+        <a href="mailto:serene@head4strength.com">
+          <div class="box">
+            <iron-image preload src="../images/icons/mail.svg"></iron-image>
+            <h4>serene@head4strength.com</h4>
+          </div>
+        </a>
+
+        <a href="https://fb.com/head4strength.com">
+          <div class="box">
+            <iron-image preload src="../images/icons/facebook.svg"></iron-image>
+            <h4>fb.com/head4strength</h4>
+          </div>
+        </a>
+
+        <a href="https://twitter.com/head4strength">
+          <div class="box">
+            <iron-image preload src="../images/icons/twitter.svg"></iron-image>
+            <h4>twitter.com/head4strength</h4>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/head4strength">
+          <div class="box">
+            <iron-image preload src="../images/icons/instagram.svg"></iron-image>
+            <h4>instagram.com/head4strength</h4>
+          </div>
+        </a>
+
+        <a href="tel:0044(0)1736732324">
+          <div class="box">
+            <iron-image preload src="../images/icons/phone-call.svg"></iron-image>
+            <h4>0044 (0)1736 732324</h4>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="box">
+            <iron-image preload src="../images/icons/map.svg"></iron-image>
+            <h4>Location</h4>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+    
+  </template>
+
+  <script>
+    class MyContactus extends Polymer.Element {
+      static get is() { 
+        return 'my-contactus'; 
+        }
+    }
+
+    window.customElements.define(MyContactus.is, MyContactus);
+  </script>
+</dom-module>
