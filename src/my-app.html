@@ -12,6 +12,7 @@
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
 <link rel="import" href="my-icons.html">
 
 <link rel="lazy-import" href="my-home.html">
@@ -89,6 +90,9 @@
       }
     </style>
 
+    <iron-media-query query="(min-width: 600px)" query-matches="{{isDesktop}}"></iron-media-query>
+    <iron-media-query query="(max-width: 600px)" query-matches="{{isMobile}}"></iron-media-query>
+
     <app-location route="{{route}}"></app-location>
     <app-route
         route="{{route}}"
@@ -111,6 +115,9 @@
       <!-- Main content -->
       <app-header-layout has-scrolling-region>
 
+         <!-- Desktop Version -->
+        <template is="dom-if" if="{{isDesktop}}">
+
         <app-header slot="header" fixed>
           <app-toolbar>
             <paper-icon-button style="width: 60px; height: 60px;" icon="my-icons:menu" drawer-toggle></paper-icon-button>  
@@ -119,6 +126,22 @@
             <!--<iron-image id="h4slong" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image>        -->
           </app-toolbar>
         </app-header>
+
+        </template>
+
+         <!-- Mobile Version -->
+        <template is="dom-if" if="{{isMobile}}">
+
+        <app-header slot="header" fixed>
+          <app-toolbar>
+            <paper-icon-button style="width: 60px; height: 60px;" icon="my-icons:menu" drawer-toggle></paper-icon-button>  
+            <!--<a href="/"><iron-image id="h4slogo" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image></a>        -->
+            <div id="topheader">LAMORNA WINK</div>
+            <!--<iron-image id="h4slong" src="../images/LAMORNAWINK-LOGO-V41.png" preload sizing="contain"></iron-image>        -->
+          </app-toolbar>
+        </app-header>
+
+        </template>
 
         <iron-pages
             selected="[[page]]"
