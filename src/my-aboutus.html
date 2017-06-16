@@ -1,0 +1,39 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-aboutus">
+    <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      iron-image {
+        height: 300px;
+        width: 100%;
+      }
+      h1 {
+        font-weight: 400;
+      }
+      h4 {
+        font-weight: 300;
+        margin: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <h1>About Us</h1>
+    </div>
+  </template>
+
+    <script>
+        class MyAboutus extends Polymer.Element {
+            static get is() {
+                return 'my-aboutus';
+            }
+        }
+
+        window.customElements.define(MyAboutus.is, MyAboutus);
+    </script>
+</dom-module>

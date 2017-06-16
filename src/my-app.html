@@ -18,7 +18,7 @@
 
 <link rel="lazy-import" href="my-home.html">
 <link rel="lazy-import" href="my-food.html">
-<link rel="lazy-import" href="my-events.html">
+<link rel="lazy-import" href="my-aboutus.html">
 <link rel="lazy-import" href="my-contactus.html">
 <link rel="lazy-import" href="my-view404.html">
 
@@ -104,6 +104,7 @@
       }
       iron-pages {
         background-color: #222c6d;
+        height: 100%;
       }
       app-toolbar {
         @apply(--layout-horizontal);
@@ -127,7 +128,7 @@
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="home" href="home">Home</a>
           <a name="food" href="food">Food</a>
-          <!--<a name="events" href="events">Events</a>-->
+          <!--<a name="aboutus" href="aboutus">About Us</a>-->
           <a name="contactus" href="contactus">Contact Us</a>
         </iron-selector>
       </app-drawer>
@@ -173,7 +174,7 @@
             role="main">
           <my-home name="home"></my-home>
           <my-food name="food"></my-food>
-          <!--<my-events name="events"></my-events>-->
+          <my-aboutus name="aboutus"></my-aboutus>
           <my-contactus name="contactus"></my-contactus>
           <my-view404 name="view404"></my-view404>
         </iron-pages>

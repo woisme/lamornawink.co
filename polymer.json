@@ -4,7 +4,7 @@
   "fragments": [
     "src/my-home.html",
     "src/my-food.html",
-    "src/my-events.html",
+    "src/my-aboutus.html",
     "src/my-contactus.html",
     "src/my-view404.html"
   ],

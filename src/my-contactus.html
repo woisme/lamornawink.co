@@ -19,9 +19,13 @@
       h4 {
         font-weight: 300;
         margin: 10px;
+        font-size: 24px;
+        line-height: 0.7;
       }
       iron-image {
         margin: 10px 0px 0px 10px;
+        height: 50px;
+        width: 50px;
       }
       .bigbox {
         @apply(--layout-wrap);
@@ -35,10 +39,21 @@
         border-radius: 5px;
         background-color: #fff;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 280px;
+        height: 170px;
       }
       a {
         text-decoration: none;
       }
+      google-map {
+        height: 600px;
+      }
+      img {
+        height: 50px;
+        width: 50px;
+      }
+
     </style>
 
     <div class="card">
@@ -53,13 +68,6 @@
           </div>
         </a>
 
-        <a href="mailto:serene@head4strength.com">
-          <div class="box">
-            <iron-image preload src="../images/icons/mail.svg"></iron-image>
-            <h4>lee.saiche@gmail.com</h4>
-          </div>
-        </a>
-
         <a href="https://fb.com/lamornawink.com">
           <div class="box">
             <iron-image preload src="../images/icons/facebook.svg"></iron-image>
@@ -67,10 +75,13 @@
           </div>
         </a>
 
-        <a href="#">
+        <a href="https://goo.gl/maps/UakswiD48Hy">
           <div class="box">
             <iron-image preload src="../images/icons/map.svg"></iron-image>
-            <h4>Location</h4>
+            <h4>Lamorna</h4>
+            <h4>Cornwall</h4>
+            <h4>TR19 6XQ</h4>
+            <google-map latitude="50.065847" longitude="-5.569229" api-key="AIzaSyAkylv5FgAPKF5IEcNLrIg9MlxcxkNyNFs"></google-map>
           </div>
         </a>
 
